@@ -3,12 +3,12 @@ import { Greeter } from "./greeter";
 export class htmlGreeter extends Greeter{
     tagName: string;
 
-    constructor(greeting: string, name:string, tagName: string = "h1"){
-        super(greeting, name);
+    constructor(greeting: string, tagName: string = "h1"){
+        super(greeting);
         this.tagName = tagName;
     }
 
-    greet(): string {
-        return `<${this.tagName}>${this.greeting}, ${this.name}!</${this.tagName}>`;
+    greet(name:string): string {
+        return `<${this.tagName}>${this.greeting}, ${name}!</${this.tagName}>`;
     };
 }

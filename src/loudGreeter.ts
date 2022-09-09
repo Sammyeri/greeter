@@ -7,7 +7,7 @@ export class loudGreeter extends Greeter {
         this.extra = this.extra + "!";
     }
 
-    greet(): string {
-        return `${this.greeting}, ${this.name}${this.extra}`;
+    greet(name:string): string {
+        return `${this.greeting}, ${name}${this.extra}`;
     }
 }

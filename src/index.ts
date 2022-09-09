@@ -3,12 +3,12 @@ import {javaScriptGreeter} from "./javaScriptGreeter";
 import {loudGreeter} from  "./loudGreeter";
 import {htmlGreeter} from "./htmlGreeter";
 
-let greeter = new Greeter("Hello", "John");
-let java = new javaScriptGreeter("Welcome", "Anne");
-let loud = new loudGreeter("Hi", "Jen");
-let html = new htmlGreeter("Hey", "Dean");
+let greeter = new Greeter("Hello");
+let java = new javaScriptGreeter("Welcome");
+let loud = new loudGreeter("Hi");
+let html = new htmlGreeter("Hey");
 
-console.log(greeter.greet());
-console.log(java.greet());
-console.log(loud.greet());
-console.log(html.greet());
+console.log(greeter.greet("John"));
+console.log(java.greet("Anne"));
+console.log(loud.greet("Jen"));
+console.log(html.greet("Dean"));

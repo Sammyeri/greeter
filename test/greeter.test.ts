@@ -8,10 +8,10 @@ describe("greeterclass tests",() => {
         //setup
         const greeting = "Hello";
         const name = "John";
-        const preGreeter =  new Greeter(greeting, name);
+        const preGreeter =  new Greeter(greeting);
 
         //execute
-        let result = preGreeter.greet();
+        let result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("Hello, John!");
@@ -21,10 +21,10 @@ describe("greeterclass tests",() => {
          //setup
          const greeting = "Welcome";
          const name = "Jacob";
-         const preGreeter =  new Greeter(greeting, name);
+         const preGreeter =  new Greeter(greeting);
  
          //execute
-         let result = preGreeter.greet();
+         let result = preGreeter.greet(name);
  
          //evaluate
          expect(result).toBe("Welcome, Jacob!");
@@ -36,10 +36,10 @@ describe("javaScriptGreeter tests", () => {
         //setup
         const greeting = "Hello";
         const name = "Bob";
-        const preGreeter = new javaScriptGreeter(greeting, name);
+        const preGreeter = new javaScriptGreeter(greeting);
 
         //execute
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("console.log('Hello, Bob!')");
@@ -49,10 +49,10 @@ describe("javaScriptGreeter tests", () => {
         //setup
         const greeting = "Welcome";
         const name = "Andy";
-        const preGreeter = new javaScriptGreeter(greeting, name);
+        const preGreeter = new javaScriptGreeter(greeting);
 
         //execute
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("console.log('Welcome, Andy!')");
@@ -64,10 +64,10 @@ describe("loudGreeter tests", () => {
         //setup
         const greeting = "Hello";
         const name = "Dean";
-        const preGreeter = new loudGreeter(greeting,name);
+        const preGreeter = new loudGreeter(greeting);
 
         //execute
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("Hello, Dean!!");
@@ -77,13 +77,13 @@ describe("loudGreeter tests", () => {
         //setup
         const greeting = "Welcome";
         const name = "Jessica";
-        const preGreeter = new loudGreeter(greeting, name);
+        const preGreeter = new loudGreeter(greeting);
 
         //execute
         preGreeter.addVolume();
         preGreeter.addVolume();
         preGreeter.addVolume();
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("Welcome, Jessica!!!!!");
@@ -93,11 +93,11 @@ describe("loudGreeter tests", () => {
         //setup
         const greeting = "Hello";
         const name = "Marnie";
-        const preGreeter = new loudGreeter(greeting, name);
+        const preGreeter = new loudGreeter(greeting);
 
         //execute
         preGreeter.addVolume();
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("Hello, Marnie!!!");
@@ -109,10 +109,10 @@ describe("htmlGreeter tests", () => {
         //setup
         const greeting = "Hello";
         const name = "Bella";
-        const preGreeter = new htmlGreeter(greeting, name);
+        const preGreeter = new htmlGreeter(greeting);
 
         //execute
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaluate
         expect(result).toBe("<h1>Hello, Bella!</h1>");
@@ -123,10 +123,10 @@ describe("htmlGreeter tests", () => {
         const greeting = "Welcome";
         const name = "Ben";
         const tagName = "p";
-        const preGreeter = new htmlGreeter(greeting, name, tagName);
+        const preGreeter = new htmlGreeter(greeting, tagName);
 
         //execute
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evaulate
         expect(result).toBe("<p>Welcome, Ben!</p>");
@@ -137,10 +137,10 @@ describe("htmlGreeter tests", () => {
         const greeting = "Hi";
         const name = "Jen";
         const tagName = "a";
-        const preGreeter = new htmlGreeter(greeting, name, tagName);
+        const preGreeter = new htmlGreeter(greeting, tagName);
 
         //execute
-        const result = preGreeter.greet();
+        const result = preGreeter.greet(name);
 
         //evalute
         expect(result).toBe("<a>Hi, Jen!</a>");

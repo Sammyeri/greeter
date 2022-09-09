@@ -1,15 +1,13 @@
 
 export class Greeter {
-    greeting: string;
-    name: string; 
+    greeting: string; 
 
-    constructor(greeting : string, name:string){
+    constructor(greeting : string){
         this.greeting = greeting;
-        this.name = name;
     }
     
-    greet() :string {
-        return `${this.greeting}, ${this.name}!`
+    greet(name:string) :string {
+        return `${this.greeting}, ${name}!`
     }
     
 
